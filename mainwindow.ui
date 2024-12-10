@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <widget class="QSplitter" name="splitter">
+      <property name="orientation">
+       <enum>Qt::Orientation::Horizontal</enum>
+      </property>
+      <widget class="QTreeWidget" name="navTree">
+       <column>
+        <property name="text">
+         <string>Simulation </string>
+        </property>
+       </column>
+       <item>
+        <property name="text">
+         <string>Categorical</string>
+        </property>
+        <item>
+         <property name="text">
+          <string>1 Categorical Variable</string>
+         </property>
+         <item>
+          <property name="text">
+           <string>Single Group</string>
+          </property>
+          <property name="whatsThis">
+           <string>1cat_single</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Multiple Groups</string>
+          </property>
+          <property name="whatsThis">
+           <string>1cat_multi</string>
+          </property>
+         </item>
+        </item>
+        <item>
+         <property name="text">
+          <string>2 Categorical Variables</string>
+         </property>
+         <property name="whatsThis">
+          <string>2cat</string>
+         </property>
+        </item>
+       </item>
+       <item>
+        <property name="text">
+         <string>Quantitative</string>
+        </property>
+        <item>
+         <property name="text">
+          <string>1 Quantitative Variable</string>
+         </property>
+         <item>
+          <property name="text">
+           <string>Single Group</string>
+          </property>
+          <property name="whatsThis">
+           <string>1quant_single</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Multiple Groups</string>
+          </property>
+          <property name="whatsThis">
+           <string>1quant_multi</string>
+          </property>
+         </item>
+        </item>
+        <item>
+         <property name="text">
+          <string>2 Quantitative Variables</string>
+         </property>
+         <property name="whatsThis">
+          <string>2quant</string>
+         </property>
+        </item>
+       </item>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>navTree</sender>
+   <signal>itemActivated(QTreeWidgetItem*,int)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>handleNavigation(QTreeWidgetItem*,int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>245</x>
+     <y>311</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>544</x>
+     <y>-15</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>handleNavigation(QTreeWidgetItem*,int)</slot>
+ </slots>
+</ui>
