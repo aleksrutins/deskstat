@@ -12,6 +12,9 @@ NormDist::NormDist(QWidget *parent)
 {
     ui->setupUi(this);
 
+    plot->xAxis->setLabel("Value");
+    plot->yAxis->setLabel("Probability");
+
     ui->frame->layout()->addWidget(plot);
 }
 
@@ -38,10 +41,6 @@ void NormDist::plotDistribution()
     // Create graph and assign data to it
     plot->addGraph();
     plot->graph(0)->setData(x, y);
-
-    // Give the axes some labels
-    plot->xAxis->setLabel("x");
-    plot->yAxis->setLabel("y");
 
     // Set ranges for the axes
     plot->xAxis->setRange(lowerDomain, upperDomain);
