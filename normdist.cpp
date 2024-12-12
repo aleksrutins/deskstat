@@ -31,7 +31,7 @@ void NormDist::plotDistribution()
 
     QVector<double> x(N_POINTS), y(N_POINTS);
     for (int i = 0; i < N_POINTS; ++i) {
-        x[i] = i / ((N_POINTS) / domain); // x goes from -1 to 1
+        x[i] = lowerDomain + (i / ((N_POINTS) / domain));
         y[i] = (1 / (stdev * qSqrt(2 * M_PI))) * pow(M_E, (0-pow((x[i] - mean), 2.0)/(2 * pow(stdev, 2.0)))); // normal curve
     }
 
