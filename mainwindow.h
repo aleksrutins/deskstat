@@ -3,6 +3,7 @@
 
 #include <QMainWindow>
 #include <QTreeWidget>
+#include <QPointer>
 
 
 QT_BEGIN_NAMESPACE
@@ -26,6 +27,6 @@ private:
     void replaceSim(QWidget *newSim);
 
     Ui::MainWindow *ui;
-    QWidget *activeSim = nullptr;
+    QPointer<QWidget> activeSim;
 };
 #endif // MAINWINDOW_H

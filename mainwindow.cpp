@@ -2,6 +2,7 @@
 #include "./ui_mainwindow.h"
 #include "cat1multi.h"
 #include "cat1single.h"
+#include "normdist.h"
 #include "quant1single.h"
 
 MainWindow::MainWindow(QWidget *parent)
@@ -18,7 +19,7 @@ MainWindow::~MainWindow()
 
 void MainWindow::replaceSim(QWidget *newSim) {
     if(activeSim != nullptr) {
-        delete activeSim;
+        delete activeSim.data();
     }
 
     activeSim = newSim;
@@ -47,5 +48,9 @@ void MainWindow::handleNavigation(QTreeWidgetItem *where, int column) {
     }
     if(desc == "2quant") {
         replaceSim(new Quant1Single(this));
+    }
+
+    if(desc == "normdist") {
+        replaceSim(new NormDist(this));
     }
 }

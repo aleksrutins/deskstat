@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>Desktop Statistics Calculator</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QHBoxLayout" name="horizontalLayout">
@@ -91,6 +91,19 @@
          </property>
          <property name="whatsThis">
           <string>2quant</string>
+         </property>
+        </item>
+       </item>
+       <item>
+        <property name="text">
+         <string>Probability</string>
+        </property>
+        <item>
+         <property name="text">
+          <string>Normal Distribution</string>
+         </property>
+         <property name="whatsThis">
+          <string>normdist</string>
          </property>
         </item>
        </item>

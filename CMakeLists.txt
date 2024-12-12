@@ -26,6 +26,8 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         quant1single.h quant1single.cpp quant1single.ui
         cat1single.h cat1single.cpp cat1single.ui
         cat1multi.h cat1multi.cpp cat1multi.ui
+        qcustomplot/qcustomplot.cpp qcustomplot/qcustomplot.h
+        normdist.h normdist.cpp normdist.ui
     )
 # Define target properties for Android with Qt 6 as:
 #    set_property(TARGET deskstat APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR
